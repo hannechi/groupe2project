@@ -1,0 +1,26 @@
+<table class="table">
+    <thead class="table-dark">
+      <tr>
+        <td>Id</td>
+        <td>Nom</td>
+        <td>Prenom</td>
+        <td>Email</td>
+        <td>Salaire</td>
+        <td>Age</td>
+        <td>Supprimer</td>
+        <td>Modifier</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of listepersonnel">
+        <td>{{item.id}}</td>
+        <td>{{item.nom}}</td>
+        <td>{{item.prenom}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.salaire}}</td>
+        <td>{{item.age}}</td>
+        <td><i (click)="supprimerpersonnel(item.id)" class="fa fa-trash fa-2x" style="color: red;" aria-hidden="true"></i></td>
+        <td><i class="fa fa-wrench fa-2x" (click)="naviguerversmodifer(item.id)" style="color: darkblue;" aria-hidden="true"></i></td>
+    </tr>
+    </tbody>
+  </table>
